@@ -1,6 +1,6 @@
 <?php
 require_once 'conn.php';
-$email= 'sonialouder@gmail.com';
-$domain = strstr($email, '@');
-echo $domain;
+echo $_SERVER['PHP_SELF'];
+echo $_SERVER['HTTP_HOST'];
+
 ?>
