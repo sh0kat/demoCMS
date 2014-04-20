@@ -19,6 +19,8 @@ session_start();
 $_SESSION['user_id'] = $row['user_id'];
 $_SESSION['access_lvl'] = $row['access_lvl'];
 $_SESSION['name'] = $row['name'];
+} else {
+    redirect(admin.php);
 }
 }
 redirect('index.php');
