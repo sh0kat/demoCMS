@@ -19,6 +19,7 @@ Not a member yet? <a href="useraccount.php">Create a new account!</a>
 <a href="forgotpass.php">Forgot your password?</a>
 </p>
 </form>
+<<<<<<< HEAD
 <div style="background-color: #dcdcdc;">You can either register as a user or use the following credentials to log in to this CMS.<br><br>
     <strong>For User </strong><br>
 Email : user1@gmail.com<br>
@@ -30,4 +31,6 @@ Pass  : 123456
 
 
 </div>
+=======
+>>>>>>> 18a31d2c59cb86f36387c975825f6aa1225d8ad6
 <?php require_once 'footer.php'; ?>
