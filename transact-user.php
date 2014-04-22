@@ -20,13 +20,13 @@ $_SESSION['access_lvl'] = $row['access_lvl'];
 $_SESSION['name'] = $row['name'];
 }
 }
-redirect('index.php');
+redirect('../index.php');
 break;
 case 'Logout':
 session_start();
 session_unset();
 session_destroy();
-redirect('index.php');
+redirect('../index.php');
 break;
 case 'Create Account':
 if (isset($_POST['name'])
@@ -45,7 +45,7 @@ $_SESSION['user_id'] = mysql_insert_id($conn);
 $_SESSION['access_lvl'] = 1;
 $_SESSION['name'] = $_POST['name'];
 }
-redirect('index.php');
+redirect('../index.php');
 break;
 case 'Modify Account':
 if (isset($_POST['name'])
@@ -61,7 +61,7 @@ $sql = "UPDATE cms_users " .
 mysql_query($sql, $conn)
 or die('Could not update user account; ' . mysql_error());
 }
-redirect('admin.php');
+redirect('../admin.php');
 break;
 case 'Send my reminder!':
 if (isset($_POST['email'])) {
@@ -82,7 +82,7 @@ mail($_POST['email'], $subject, $body)
 or die('Could not send reminder email.');
 }
 }
-redirect('login.php');
+redirect('../login.php');
 break;
 case 'Change my info':
 session_start();
@@ -97,7 +97,7 @@ $sql = "UPDATE cms_users " .
 mysql_query($sql, $conn)
 or die('Could not update user account; ' . mysql_error());
 }
-redirect('cpanel.php');
+redirect('../cpanel.php');
 break;
 }
 }
