@@ -49,7 +49,7 @@ case 'Publish':
 if ($_POST['article']) {
 $sql = "UPDATE cms_articles " .
 "SET is_published=1, date_published='" .
-date("Y-m-d H:i:s",time()) . "' " .
+date("Y-m-d H:i:s",time()) . "' " . 
         "WHERE article_id=" . $_POST['article'];
 mysql_query($sql, $conn)
 or die('Could not publish article; ' . mysql_error());
